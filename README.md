@@ -13,4 +13,4 @@
  * Edit the settings in `keys.py.example`
  * Change `publish` to `False` in `scarcitybot.py` if you don't want it to tweet
 
-**Thanks to [Zach Gage for making Scarcity](https://twitter.com/helvetica/status/1369033776945332226) and [Today in Tabs](https://www.todayintabs.com/p/non-fungible-thursday) for bringing it to my attention). It's the first time I've felt inspired to make a twitter bot in years.**
+**Thanks to [Zach Gage for making Scarcity](https://twitter.com/helvetica/status/1369033776945332226) and [Today in Tabs](https://www.todayintabs.com/p/non-fungible-thursday) for bringing it to my attention. It's the first time I've felt inspired to make a twitter bot in years.**
