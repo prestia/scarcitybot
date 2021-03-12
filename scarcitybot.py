@@ -1,9 +1,9 @@
 import os #needed to read and write to the ledger
-import hashlib #needed to computer the md5 hash
+import hashlib #needed to compute the md5 hash
 import urllib.request #needed to scrape the web
 from datetime import datetime #needed to update ledger with the date
 
-debug = False #if True it will publish a bunch of garbage for debugging
+debug = False #if True it will print a bunch of garbage for debugging
 publish = True #if True it will tweet
 
 if publish:
@@ -14,12 +14,12 @@ def main():
   path = os.path.dirname(os.path.abspath(__file__)) #gets the path of the generator.py file
   
   if debug:
-    f = open(path + '/devledger', 'r+') #opens dev ledger for reading and writing at the beginning of the file
+    f = open(path + '/devledger', 'r+') #opens devledger for reading and writing at the beginning of the file
   else:
     f = open(path + '/ledger', 'r+') #opens ledger for reading and writing at the beginning of the file
   
   last_line = f.readlines()[-1] #get the last line of the file
-  last_url = "http://stfj.net/scarcity/"+last_line.split()[0] # get the last known good url
+  last_url = "http://stfj.net/scarcity/"+last_line.split()[0] #get the last known good url
   
   if not is_page_alive(last_url): #check to see if the page is still live
     update_ledger(f,last_line)
