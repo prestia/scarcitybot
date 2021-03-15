@@ -58,8 +58,7 @@ def update_ledger(key_file,end_line):
   key_file.write("\n"+generate_key(key_file))
   new_url="http://stfj.net/scarcity/"+generate_key(key_file)
 
-  if publish:
-  	tweet(new_url)
+  if publish: tweet(new_url)
   if debug: print(new_url)
   
 def tweet(msg):
